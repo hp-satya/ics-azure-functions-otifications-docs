@@ -5,12 +5,12 @@ on:
   push:
     branches: [main]
     paths:
-      - "time-triggered-functions-flow-diagram.html"
+      - "index.html"
       - ".github/workflows/deploy-static-site.yml"
   pull_request:
     branches: [main]
     paths:
-      - "time-triggered-functions-flow-diagram.html"
+      - "index.html"
   workflow_dispatch: # Allow manual triggering
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
@@ -42,7 +42,7 @@ jobs:
           mkdir -p docs
 
           # Copy the main flow diagram
-          cp time-triggered-functions-flow-diagram.html docs/index.html
+          cp index.html docs/index.html
 
           # Create additional pages if needed
           cat > docs/README.md << 'EOF'
